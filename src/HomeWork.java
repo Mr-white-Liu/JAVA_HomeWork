@@ -18,12 +18,19 @@ public class HomeWork {
                     sum += list[k];
                 }
                 if (Math.cbrt(sum) == (int) Math.cbrt(sum)) {
+                    int flg=0;
                     for (int k = j; k < i; k++) {
+                        if(flg==15){
+                            System.out.println();
+                            flg=0;
+                        }
                         System.out.print(k + "^3 + ");
+                        flg++;
                     }
                     System.out.print(i + "^3 = ");
                     System.out.println((int)Math.cbrt(sum) + "^3");
                     sum = 0;
+                    System.out.println();
                 }
                 else
                     sum = 0;
